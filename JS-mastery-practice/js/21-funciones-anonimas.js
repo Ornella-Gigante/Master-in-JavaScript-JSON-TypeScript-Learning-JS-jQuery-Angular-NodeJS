@@ -24,11 +24,7 @@ sumame(5,5, dato =>{
 },
 (dato) => {
     console.log("La suma multiplicado por dos es :", (dato* 2));
-}
-
-
-
-);
+});
 
 
 // Para que se vea en consola siempre debe usarse console.log (manera simple)
@@ -42,3 +38,4 @@ console.log(sumame(2, 3,
 );
 
 // Imprimiendo en consola con callback
+
