@@ -91,3 +91,29 @@ for(let elemento in lenguajes ){
 document.write("</ul>");
 
 
+// Cómo buscar arrays con método find() 
+
+// Utilizando la flecha para que sea más clean code 
+
+var busqueda = lenguajes.find(lenguaje => lenguaje == "PHP"); 
+
+console.log(busqueda);
+
+
+// Cómo buscar los ínidices de arrays con método findIndex() 
+
+var busqueda2 = lenguajes.findIndex(lenguaje => lenguaje == "PHP");
+
+console.log(busqueda2);
+
+
+//Uso del método some() para comprobar valores con ciertas condiciones 
+// Si la condicions e cumple (T) si no se cumple (F)
+
+var precios = [10,20,30,40,50];
+
+var busquedaPrecios = precios.some(precio => precio >= 20); // Precio igual o mayor que 20 
+var busquedaPrecios = precios.some(precio => precio > 200); // Precio mayor que 200
+
+console.log(busquedaPrecios);
+
