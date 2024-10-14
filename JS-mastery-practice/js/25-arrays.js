@@ -53,3 +53,17 @@ for(var i = 0; i < lenguajes.length; i++){
 }
 
 document.write("</ul>");
+
+
+// For each 
+
+lenguajes.forEach( (elemento, indice) => {
+
+        document.write("<li>" + indice + "-" + elemento + "</li>");
+
+}
+
+);
+
+
+document.write("</ul"); 
