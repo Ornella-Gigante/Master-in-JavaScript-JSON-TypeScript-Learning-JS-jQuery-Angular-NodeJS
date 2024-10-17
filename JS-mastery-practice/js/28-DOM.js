@@ -131,3 +131,14 @@ var id = document.querySelector("#encabezado");
 console.log(id);
 
 
+// Query Selector All 
+
+
+
+    // Obtener todos los divs con la clase 'rojo'
+    var divsRojos = document.querySelectorAll('.rojito');
+
+    // Cambiar el fondo del primer div verde (si existe)
+    if (divsRojos.length > 0) {
+        divsRojos[0].style.background = "green"; // Cambiar el fondo a púrpura
+    }
