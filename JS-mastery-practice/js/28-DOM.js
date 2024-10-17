@@ -108,4 +108,26 @@ for(valor in todosLosDivs){
 seccion.append(hr);
 
 
-// Conseguir elementos por su clase 
+// Conseguir elementos por su clase css 
+
+
+var divsRojos = document.getElementsByClassName('rojo');
+var divsAmarillos = document.getElementsByClassName('amarillo');
+divsAmarillos[0].style.background='purple';
+var div; 
+for( div in divsRojos){
+
+    if(divsRojos[div].className == "rojo"){
+
+        divsRojos[div].style.background = "red";
+    }
+    
+}
+
+
+// Query selector 
+
+var id = document.querySelector("#encabezado");
+console.log(id);
+
+
