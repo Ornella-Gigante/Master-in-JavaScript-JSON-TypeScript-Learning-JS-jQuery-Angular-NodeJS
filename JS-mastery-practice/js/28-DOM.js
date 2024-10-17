@@ -10,7 +10,7 @@ function cambiaColor(color){
 }
 
 // getElementByID solo selecciona con IDs 
-// var caja = document.getElementById("micaja");
+//var caja = document.getElementById("micaja");
 
 // .querySelector() selecciona desd cualquier cosa : atributo, clase, estilo, etc (+flexible que getElementById)
 
@@ -37,3 +37,75 @@ caja.style.color = "white";
 caja.className = "hola"; 
 
 console.log(caja); 
+
+
+// Buscar todos los divs en el HTML 
+
+
+
+
+// Conseguir elementos a través de un ID completo 
+
+
+
+
+
+
+
+
+
+// Conseguir elementos por su etiqueta 
+
+
+
+var todosLosDivs = document.getElementsByTagName('div');
+
+var sacarContenido = todosLosDivs[2].textContent; // sacar el contenido de los divs 
+
+console.log(sacarContenido);
+
+console.log(todosLosDivs);
+
+// Modificar un valor del div 
+
+var modificarContenido = todosLosDivs[2];
+modificarContenido.innerHTML = "Otro texto para el segundo elemento";  //aparecerea en el HTML no en consola 
+
+
+// Recorrer los elementos en modo lista 
+
+var todosLosDivs = document.getElementsByTagName('div'); 
+
+
+//Creando una elemento hr desde fichero .js a html 
+var seccion = document.querySelector("#miseccion");
+var hr = document.createElement("hr");
+
+
+
+var valor;
+for(valor in todosLosDivs){
+
+    // Comprobar si es un elemento del DOM 
+    // prepend() inserta uno o mas nodos AL PRINCIPIO de un elemento padre 
+    // append() inserta uno o mas nodos AL FINAL de un elemento padre 
+
+    if( typeof todosLosDivs[valor].textContent == 'string'){
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode(todosLosDivs[valor].textContent); 
+        parrafo.append(texto)
+        seccion.append(parrafo);
+      
+      
+    }
+  
+
+};
+
+
+// CReando linea divisoria al final 
+
+seccion.append(hr);
+
+
+// Conseguir elementos por su clase 
