@@ -65,3 +65,63 @@ boton.addEventListener('mouseout', function(){
     boton.style.background = "purple";
 
 });
+
+
+// Focus 
+// Captura el elemento en el cual el usuario está dandole focus 
+
+
+var input = document.querySelector("#campo_nombre");
+input.addEventListener('focus', function(){
+    console.log("[focus]Estás dentro del input"); 
+});
+
+
+// Blur 
+// Captura el momento en el que el usuario deja de interactuar con el elemento y sale del foco 
+
+
+var input = document.querySelector("#campo_nombre");
+input.addEventListener('blur', function(){
+
+
+    console.log("[blur]Estas fuera del input");
+});
+
+
+// Keydown 
+// Keydown solo sucede cuando se está pulsando una tecla en el momento 
+// Se usará fromCharCode() el cual pasa los valores correspondientes a numéricos 
+// Con event.keyCode sé que tecla estoy pulsando 
+
+input.addEventListener('keydown', function(event){
+
+
+    console.log("[keydown]Pulsando esta tecla", String.fromCharCode(event.keyCode));
+
+
+});
+
+
+
+
+//Keypress 
+//Cuando estoy presionando la tecla
+
+input.addEventListener('keypress', function(event){
+
+    console.log("[keypress]Tecla presionada", String.fromCharCode(event.keyCode));
+
+});
+
+
+// Keyup 
+// Cuando levanto el dedo de la tecla 
+
+input.addEventListener('keyup', function(event){
+
+    console.log("[keyup] Tecla soltada", String.fromCharCode(event.keyCode));
+
+});
+
+
