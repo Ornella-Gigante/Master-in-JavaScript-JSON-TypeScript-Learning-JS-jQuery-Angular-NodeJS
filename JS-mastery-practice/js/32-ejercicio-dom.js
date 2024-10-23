@@ -1,63 +1,58 @@
 'use strict'
 
-
-// Mensaje que dará a la consola cuando la pçagina se cargue correctamente 
-
-window.addEventListener('load', function(){
-
+window.addEventListener('load', function() {
 	console.log("DOM cargado!");
 
-	//Capturar el formulario 
-
 	var formulario = document.querySelector("#formulario");
-
-	//SE ocultara el box dashed si no hay data ingresada por el usuario 
-
-
 	var box_dashed = document.querySelector(".dashed");
 	box_dashed.style.display = "none"; 
 
-	formulario.addEventListener('submit', function(){
-
+	formulario.addEventListener('submit', function() {
 		console.log("Evento submit capturado");
 
-
-	// Declarando las variables del formulario 
-	// Se obtienen los datos que ingresa el usuario y se pasan por consola 
-
+		// Obtener los valores ingresados por el usuario
 		var nombre = document.querySelector("#nombre").value;
 		var apellidos = document.querySelector("#apellidos").value; 
-		var edad = document.querySelector("#edad").value;
+		var edad = parseInt(document.querySelector("#edad").value);
 
 
-		// Mostrar la caja con la data ingresada por el usuario dentro 
 
+		// Validacion del formulario 
+		// Si no cumple la condición, devuelve mensaje de error 
+		// SE creará un mensaje personalizado de error 
+
+		if(nombre.trim() == null || nombre.trim().length == 0){
+			alert("Nombre no válido");
+			document.querySelector("#error_nombre").innerHTML = "El nombre no es válido"; 
+			return false;
+		}
+
+		if(apellidos.trim() == null || apellidos.trim().length == 0){
+			alert("Apellidos no válidos");
+			return false;
+		}
+
+
+		if(edad == null || edad <= 0 || isNaN(edad)){
+			alert("Edad no válida");
+			return false;
+		}
+
+		// Mostrar la caja "dashed"
 		box_dashed.style.display = "block"; 
 
+		// Limpiar el contenido de la caja antes de agregar nuevos datos
+		box_dashed.innerHTML = '<h3>Información del usuario</h3><hr>';
 
-		// Se almacenarán los datos de usuario en un array 
+		// Datos del usuario y sus etiquetas
+		var etiquetas = ["Nombre: ", "Apellidos: ", "Edad: "];
+		var datos_usuario = [nombre, apellidos, edad];
 
-		var datos_usuario = [nombre,apellidos,edad];
-
-
-		var indice = 0;
-		for(indice in datos_usuario){
-
-
+		// Usar un bucle for para agregar las etiquetas y los valores
+		for (var i = 0; i < datos_usuario.length; i++) {
 			var parrafo = document.createElement("p");
-
-			parrafo.append(datos_usuario[indice]);
+			parrafo.append(etiquetas[i] + datos_usuario[i]);
 			box_dashed.append(parrafo);
-
-
-		};
-
-
+		}
 	});
-
-
 });
-
-
-
-
