@@ -24,6 +24,7 @@ window.addEventListener('load', () => {
     // Evento de clic en el botón
     boton.addEventListener('click', function () {
         cambiarColor();
+        this.style.border = "10px solid black"; // los bordes de la caja se oscurecerán al clickear en él
     });
 
     // Evento cuando el mouse pasa sobre el botón
