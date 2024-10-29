@@ -1,4 +1,4 @@
-# 🚀 Progress in the Course: Master in JavaScript - Learn JS, jQuery, Angular, NodeJS
+# 🚀 Progress in the Course: Master in JavaScript - Learn JS, TypeScript, jQuery, Angular, NodeJS
 
 Welcome to my GitHub repository! 🎉 
 Here, I'll be documenting my journey and progress in the **"Master in JavaScript: Learn JS, jQuery, Angular, NodeJS"** course available on Udemy. 
