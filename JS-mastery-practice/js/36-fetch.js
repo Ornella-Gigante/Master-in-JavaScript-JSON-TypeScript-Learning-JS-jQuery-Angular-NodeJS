@@ -9,25 +9,33 @@
 var div_usuarios = document.querySelector("#usuarios");
 
 
+// Capturando el id del profesor a cargar 
+
+
+var div_profesor = document.querySelector("#profesor");
+
 // Creando el selector de janet 
 
 var div_janet = document.querySelector("#janet");
 
-
-    getUsuarios()
-        .then(data => data.json()) //función callback que convierte un objeto a JSON 
-        .then(users => {
-
-            listadoUsuarios(users.data); //promise 
-
-            return getJanet();
-
-        })
-        .then(data => data.json())
-        .then(janet => {
-            mostrarJanet(janet.data);
-
-        });
+getUsuarios()
+    .then(data => data.json())
+    .then(users => {
+        listadoUsuarios(users.data); 
+        return getInfo();
+    })
+    .then(data => {
+        
+        div_profesor.innerHTML = data;
+        return getJanet();
+    })
+    .then(data => data.json())
+    .then(janet => {
+        mostrarJanet(janet.data);
+    })
+    .catch(error => {
+        console.error("Ocurrió un error:", error);
+    });
 
 
 // Se encapsulará el fetch 
@@ -45,6 +53,32 @@ function getJanet(){
     return fetch('https://reqres.in/api/users/2') // recibe una URL (promesa) 
 
 }
+
+
+//Creación de una promesa desde 0 
+
+function getInfo() {
+    var profesor = {
+        nombre: 'Victor',
+        apellidos: 'Robles',
+        url: 'https://victorroblesweb.es'
+    };
+    // Creación de una nueva promesa
+    return new Promise((resolve, reject) => {
+        var profesor_string = JSON.stringify(profesor);
+
+        // Simula una operación asincrónica con setTimeout
+        setTimeout(function () {
+            // Resuelve la promesa con el valor de profesor_string
+            if (profesor_string) {
+                resolve(profesor_string);
+            } else {
+                reject('Error: profesor_string es inválido');
+            }
+        }, 3000);
+    });
+}
+
 
 // Se encapsulará la lista de usuarios 
 function listadoUsuarios(usuarios){
