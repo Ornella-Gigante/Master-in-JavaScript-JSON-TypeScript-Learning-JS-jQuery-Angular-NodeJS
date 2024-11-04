@@ -21,7 +21,37 @@ jQuery(document).ready(function(){
     $("#verde").css("background","green")
                .css("color", "white");
 
+
+
+    // Selector de Clase 
+
+
+    var mi_clase = $('.zebra');
+
+
+    // Le pondrá bordes zebra a todas las clases = zebra 
+    mi_clase.css("border","5px dashed black");
+
+
+    // Le pondrá otras características css a todas las clases = sin_borde 
+    // Al hacer click, apareceran las caracteristicas de .zebra en la etiqueta de estilo y le añade la clase zebra 
+
+
+    $('.sin_borde').click(function(){
+
+        console.log("Click dado"); 
+
+        $(this).addClass('zebra');
+
+    });
+
+    
+
 });
+
+
+
+
 
 
 
