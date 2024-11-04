@@ -43,8 +43,29 @@ $(document).ready(function() {
     $('[title = "Google"]').css("background", "grey");
     $('[title = "Facebook"]').css('background', 'blue');
 
+    //Find y parent 
+    // Seleccionar por parrafo y atributo 
+
+    $('p, a').addClass('margen-superior');
 
 
+    // Se usará el metodo find() para encontrar dentro de objeto con id= caja lo que tenga como clase "resaltado"
+    var busqueda = $("#caja").find('.resaltado');
+
+    console.log(busqueda);
+
+
+     // Usar el método parent() para seleccionar el padre del primer párrafo resaltado
+     var primerParrafoResaltado = $('.resaltado').first(); // Selecciona el primer párrafo resaltado
+     var padreDelParrafo = primerParrafoResaltado.parent(); // Selecciona el padre del primer párrafo resaltado
+ 
+     // Cambia el color de fondo del padre del primer párrafo resaltado
+     padreDelParrafo.css("background", "lightgrey");
+     console.log(padreDelParrafo); // Muestra en consola el elemento padre
+ 
+
+
+    
 
 });
 
