@@ -35,7 +35,20 @@ $(document).ready(function() {
         // Se usa toggleClass() para que se agrande y achique la letra a medida que se clickea sobre esta 
         $(this).toggleClass("grande");
     });
+
+
+    // Selectores de atributos 
+    // Para seleccionar lso atributos se usan los corchetes [] 
+
+    $('[title = "Google"]').css("background", "grey");
+    $('[title = "Facebook"]').css('background', 'blue');
+
+
+
+
 });
+
+
 
 
 
