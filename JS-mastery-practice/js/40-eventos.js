@@ -5,13 +5,16 @@
 
 $(document).ready(function(){
 
+    var caja = $("#caja");
  
 // PRIMER EVENTO: MOUSEOVER 
 
-
+    /**
+     * 
+    
     // MouseOver y MouseOut 
 
-    var caja = $("#caja");
+   
 
     // Función de callback 
     // Cuando el raton pase pro encima, cambia de color 
@@ -27,8 +30,29 @@ $(document).ready(function(){
 
     });
 
+     */
+
+
+
+    // EVENTO HOVER 
+    // Más efectivo y sencillo que lo anterior, pero hace lo mismo 
+
+
+    function cambiaRosa(){
+        $(this).css("background", "pink");
+
+    }
+
+
+    function cambiaAzul(){
+        $(this).css("background","blue");
+    }
+
+
+    caja.hover(cambiaAzul,cambiaRosa);
 
 
 
 
 });
+
