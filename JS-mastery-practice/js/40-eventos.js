@@ -111,10 +111,15 @@ $(document).ready(function(){
 
     $(document).mousemove(function(){
 
+        // Hacer de la bola el cursor 
+        $("body").css("cursor", "none");
         //Coordenadas
         console.log("En X" + event.clientX);
         console.log("En Y" + event.clientY);
         $("#sigueme").css("left", event.clientX).css("top", event.clientY);
+
+
+      
 
     });
 
