@@ -52,7 +52,27 @@ $(document).ready(function(){
     caja.hover(cambiaAzul,cambiaRosa);
 
 
+    //EVENTO CLICK, DOBLE CLICK 
 
+    caja.click(function(){
+        $(this).css("background","green")
+               .css("color","white");
+
+               console.log("Click");
+    });
+
+
+    caja.dblclick(function(){
+
+        $(this).css("background","pink")
+               .css("color","violet");
+
+               console.log("Doble click");
+
+    });
+
+
+    //EVENTOS FOCUS Y BLUR
 
 });
 
