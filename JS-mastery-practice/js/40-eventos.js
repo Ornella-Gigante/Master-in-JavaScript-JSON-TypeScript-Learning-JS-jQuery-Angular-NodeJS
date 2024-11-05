@@ -74,5 +74,20 @@ $(document).ready(function(){
 
     //EVENTOS FOCUS Y BLUR
 
+    var nombre = $("#nombre")
+
+    nombre.focus(function(){
+
+        $(this).css("border", "2px solid green");
+        console.log("FOCUS!");
+    });
+
+    nombre.blur(function() {
+
+        $(this).css("border", "1px solid #ccc");
+        $("#datos").text($(this).val()).show();
+     
+    });
+
 });
 
