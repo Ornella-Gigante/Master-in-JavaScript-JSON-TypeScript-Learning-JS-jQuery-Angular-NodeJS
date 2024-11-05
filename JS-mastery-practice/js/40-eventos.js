@@ -74,7 +74,9 @@ $(document).ready(function(){
 
     //EVENTOS FOCUS Y BLUR
 
-    var nombre = $("#nombre")
+    var nombre = $("#nombre");
+
+    var datos = $("#datos");
 
     nombre.focus(function(){
 
@@ -85,9 +87,40 @@ $(document).ready(function(){
     nombre.blur(function() {
 
         $(this).css("border", "1px solid #ccc");
-        $("#datos").text($(this).val()).show();
+        datos.text($(this).val()).show();
      
     });
+
+
+    //EVENTO MOUSEDOWN Y MOUSEUP 
+
+    datos.mousedown(function(){
+        $(this).css("border-color","green");
+        
+
+    });
+
+
+    datos.mouseup(function(){
+        $(this).css("border-color","black");
+
+    });
+
+
+    //EVENTO MOUSEMOVE
+
+    $(document).mousemove(function(){
+
+        //Coordenadas
+        console.log("En X" + event.clientX);
+        console.log("En Y" + event.clientY);
+        $("#sigueme").css("left", event.clientX).css("top", event.clientY);
+
+    });
+
+
+
+
 
 });
 
