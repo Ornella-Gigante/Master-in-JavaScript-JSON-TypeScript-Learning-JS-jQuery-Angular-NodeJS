@@ -50,18 +50,59 @@ $(document).ready(function(){
     };
 
 
-
-        $.post($(this).attr("action"), usuario , function(response){
+    /**
+     * 
+     *    $.post($(this).attr("action"), usuario , function(response){
 
             console.log(response);
 
 
-    }).done(function(){
+        }).done(function(){
 
-        alert("Usuario registrado correctamente");
+            alert("Usuario registrado correctamente");
 
-    });
+        });
 
+
+     * 
+     * 
+     */
+
+        // Las peticiones ajax son más fáciles de manipular, aunque algo antiguas 
+     
+
+     $.ajax({
+
+        type: 'POST',
+        dataType: 'json',
+        contentType: 'application/json',
+        url:$(this).attr("action"),
+        data: JSON.stringify(usuario),
+        beforeSend: function(){
+            console.log("Enviando usuario...");
+
+        },
+        //si todo va correcto 
+
+        success: function(response) {
+
+            console.log(response);
+
+        },
+
+        // si algo no es correcto o genera fallos 
+
+        error: function(response){
+
+            console.log("A ocurrido un error");
+
+        },
+
+        // SE indica cuantos segundos queremos que tarde la condición en realizarse 
+        
+        timeout: 2000
+
+     });
 
      return false; 
 
