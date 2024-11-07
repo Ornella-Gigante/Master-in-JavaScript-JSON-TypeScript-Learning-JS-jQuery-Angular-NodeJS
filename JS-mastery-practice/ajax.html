@@ -17,6 +17,31 @@
                 height: 250px;
                 overflow: scroll;
             }
+
+
+
+            #boton{
+
+                margin-top: 10px;
+                height: 50px;
+                background-color: pink;
+                color: black;
+                margin-bottom: 10px;
+
+            }
+
+
+            #registro {
+
+
+                margin-top: 20px;
+                height: 50px;
+                width: 80px;
+                background-color: indianred;
+                color: black;
+                margin-bottom: 10px;
+            }
+
         </style>
 
     
@@ -29,6 +54,23 @@
 
     <body>
         <h1>Aprendiendo JQuery con Victor Robles - Más Métodos / Textos</h1>
+
+        <!--SE INGRESAN LOS DATOS DEL POST EN EL HTML-->
+        <form action="https://reqres.in/api/users" method="POST" id = "formulario" >
+            <!--SE INGRESAN LOS DATOS DE LOS PARÁMETROS DEL POST-->
+           
+            Nombre: <input type="text" id = "boton" name="name"/>  
+
+            <br>
+        
+            Web: <input type="text" id = "boton" name="web"/> 
+
+            <br>
+          
+            <input type = "submit" id = "registro" value = "Registro" /> 
+        </form>
+
+
         <div id="datos"></div>
      
     </body>

@@ -26,4 +26,49 @@ $(document).ready(function(){
     }, function(response){
         console.log(response);
     });
+
+
+    
+
+    //METODO POST 
+
+  
+    $("#formulario").submit(function(e){
+
+
+        // No redigirá a la pagina web de este modo 
+
+        e.preventDefault(); 
+
+        // Se crea una variable usuario que luego se meterá en el post 
+
+        var usuario = {
+
+        name : $('input[name = "name"]').val(),
+        web : $('input[name = "web"]').val()
+
+    };
+
+
+
+        $.post($(this).attr("action"), usuario , function(response){
+
+            console.log(response);
+
+
+    }).done(function(){
+
+        alert("Usuario registrado correctamente");
+
+    });
+
+
+     return false; 
+
+
+    });
+
+
+
+
 });
