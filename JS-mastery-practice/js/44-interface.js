@@ -14,4 +14,10 @@ $(document).ready(function(){
 
     $(".elemento").resizable(); 
 
+
+    //Metodo selectable 
+    // Se usará para ordenar los elementos de la lista ul 
+
+    $(".lista-seleccionable").selectable();
+
 });

@@ -20,6 +20,7 @@
     
         <script type="text/javascript" src="js/44-interface.js"></script>  
         <style>
+
             .elemento{
                 width: 300px;
                 height: 300px;
@@ -28,6 +29,25 @@
                 margin:  20px;
                 float: left;
             }
+
+            .lista-seleccionable li{
+                width: 80%;
+                padding: 20px;
+                border: 1px solid #ccc;
+                list-style: none;
+                cursor: pointer;
+            }
+
+
+            ul .ui-selecting {
+                background: green;
+
+            }
+
+            ul .ui-selected{
+                background: blue;
+            }
+
         </style>
 
      
@@ -38,6 +58,17 @@
 
     <body>
         <h1>Aprendiendo JQuery con Victor Robles - JQuery UI</h1>
+
+        <!--Se creará una lista con nombres de videojuegos-->
+
+        <ul class = "lista-seleccionable">
+            <li>Bloodborne</li>
+            <li>The Witcher</li>
+            <li>Mass Effect</li>
+            <li>Silent Hill</li>
+            <li>Dragon Age</li>
+        </ul>
+
         <div class = "elemento">
             Hola, soy un elemento de la web
         </div>
