@@ -7,4 +7,11 @@ $(document).ready(function(){
     // Mueve el elemento por la pagina web 
 
     $(".elemento").draggable();
+
+
+    //Redimensionar los elementos 
+    // Se usará el metodo resizable()
+
+    $(".elemento").resizable(); 
+
 });
