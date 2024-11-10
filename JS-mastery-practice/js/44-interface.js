@@ -18,6 +18,20 @@ $(document).ready(function(){
     //Metodo selectable 
     // Se usará para ordenar los elementos de la lista ul 
 
-    $(".lista-seleccionable").selectable();
+    //  $(".lista-seleccionable").selectable();
+
+
+    // Uso del metodo sortable
+    // Permite listar y ordenar elementos 
+    // El sortable no se puede usar junto con el selectable() 
+
+    $(".lista-seleccionable").sortable({
+
+        // Se generará un mensaje en consola para advertir al usuario del cambio hecho en la lista 
+
+        update: function(event, ui){
+            console.log("Cambio realizado!");
+        }
+    }); 
 
 });
