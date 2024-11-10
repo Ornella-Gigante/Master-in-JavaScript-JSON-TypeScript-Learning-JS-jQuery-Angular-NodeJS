@@ -36,6 +36,7 @@
                 border: 1px solid #ccc;
                 list-style: none;
                 cursor: pointer;
+                margin-bottom: 20px;
             }
 
 
@@ -46,6 +47,21 @@
 
             ul .ui-selected{
                 background: blue;
+            }
+
+
+            #elemento-movido{
+                width: 100px;
+                height: 100px;
+                border: 4px solid red; 
+                z-index: 10;
+            }
+
+
+            #area{
+                width: 300px;
+                height: 300px;
+                border: 4px solid purple; 
             }
 
         </style>
@@ -59,15 +75,23 @@
     <body>
         <h1>Aprendiendo JQuery con Victor Robles - JQuery UI</h1>
 
+
+        <br>
         <!--Se creará una lista con nombres de videojuegos-->
 
-        <ul class = "lista-seleccionable">
-            <li>Bloodborne</li>
-            <li>The Witcher</li>
-            <li>Mass Effect</li>
-            <li>Silent Hill</li>
-            <li>Dragon Age</li>
-        </ul>
+        <div>
+
+            <ul class = "lista-seleccionable">
+                <li>Bloodborne</li>
+                <li>The Witcher</li>
+                <li>Mass Effect</li>
+                <li>Silent Hill</li>
+                <li>Dragon Age</li>
+            </ul>
+
+
+        </div>
+      
 
         <div class = "elemento">
             Hola, soy un elemento de la web
@@ -79,6 +103,20 @@
             Hola, soy un elemento de la web
         </div>
 
+        
+
+        <div>
+
+            <div id ="elemento-movido" class = "elemento">
+            
+            </div>
+    
+            <div id ="area" class ="elemento">
+    
+            </div>
+
+        </div>
+       
      
      
     </body>

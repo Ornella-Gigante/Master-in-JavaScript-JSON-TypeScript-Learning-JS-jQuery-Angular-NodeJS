@@ -34,4 +34,17 @@ $(document).ready(function(){
         }
     }); 
 
+
+    // Droppable () 
+
+    $("#element-movido").draggable();
+    $("#area").droppable({
+        drop: function(){
+
+            // SE detectará y mandará mensaje por consola cuando el ele,ento se suelte dentro área 
+            console.log("Elemento soltado dentro del área");
+
+        }
+    });
+
 });
