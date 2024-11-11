@@ -69,4 +69,10 @@ $(document).ready(function(){
 
     });
 
+
+    // Tooltip 
+    // Al pasar el cursor aparecerá un mensaje emergente 
+
+    $(document).tooltip();
+
 });
