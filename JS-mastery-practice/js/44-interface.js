@@ -90,4 +90,9 @@ $(document).ready(function(){
 
     $("#calendario").datepicker();
 
+
+    //Tabs 
+
+    $("#pestanas").tabs();
+
 });
