@@ -75,4 +75,14 @@ $(document).ready(function(){
 
     $(document).tooltip();
 
+
+
+    //Dialog methodd 
+
+
+    $("#lanzar-popup").click(function(){
+        $("#popup").dialog();
+    });
+
+
 });
