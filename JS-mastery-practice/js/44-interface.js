@@ -47,4 +47,26 @@ $(document).ready(function(){
         }
     });
 
+
+    //Efectos 
+    // toggle() o fadeToggle() es lo mismo 
+    // explode() divide un elemento en múltiples parte s antes de desaparecer 
+    // blind()
+    // fold() 
+    // puff() 
+    // shake() 
+
+    $("#mostrar").click(function(){
+
+        //$("#caja-efectos").toggle("fade");
+        //$("#caja-efectos").effect("explode");
+        //$("#caja-efectos").toggle("blind");
+        //$("#caja-efectos").toggle("fold");
+        //$("#caja-efectos").toggle("puff");
+        $("#caja-efectos").toggle("shake", "slow", "400");
+
+
+
+    });
+
 });
