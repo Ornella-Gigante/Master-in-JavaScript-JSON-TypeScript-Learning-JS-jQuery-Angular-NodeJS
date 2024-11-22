@@ -37,6 +37,24 @@ type letrasonumeros = string | number;
 
 let cadenaMultiple: letrasonumeros = "nellanells"; 
 
+// VAR Y LET , MISMO QUE EN JS 
+
+// VAR ES GLOBAL , SE REDEFINE A NIVEL GLOBAL, NO RESPETA LOS BLOQUES 
+
+// LET ES POR BLOQUE (SCOPE), SE REDEFINE DENTRO DEL BLOQUE, ES MÁS MODERNO Y RECOMENDADO 
+
+var numero1 = 10; 
+var numero2 = 20; 
+
+if(numero1 == 10){
+    let numero1 = 44; 
+    var numero2 = 35; 
+    
+    console.log(numero1, numero2); 
+}
+
+console.log(numero1, numero2); 
+
 
 console.log(cadena);
 console.log(numero); 
