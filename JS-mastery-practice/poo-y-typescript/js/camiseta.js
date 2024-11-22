@@ -8,6 +8,7 @@ var Camiseta = /** @class */ (function () {
         this.modelo = modelo;
         this.talla = talla;
         this.precio = precio;
+        this.marca = marca;
     }
     // Método para cambiar color 
     Camiseta.prototype.setColor = function (color) {
@@ -19,12 +20,3 @@ var Camiseta = /** @class */ (function () {
     };
     return Camiseta;
 }());
-// Crear instancia de Camiseta
-var camiseta = new Camiseta("negro", "manga larga", "Nike", "XL", 13);
-camiseta.setColor("Rojo"); //cambiar color 
-// Crear otra instancia de Camiseta
-var playera = new Camiseta("violeta", "manga corta", "Adidas", "XL", 12);
-playera.setColor("Azul");
-// Mostrar ambas instancias
-console.log(camiseta);
-console.log(playera);
