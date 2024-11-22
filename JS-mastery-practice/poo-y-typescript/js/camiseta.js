@@ -20,3 +20,6 @@ var Camiseta = /** @class */ (function () {
     };
     return Camiseta;
 }());
+//INSTANCIA DE OBJETO 
+var camiseta = new Camiseta("violeta", "manga larga", "Adidas", "XL", 100);
+console.log(camiseta);

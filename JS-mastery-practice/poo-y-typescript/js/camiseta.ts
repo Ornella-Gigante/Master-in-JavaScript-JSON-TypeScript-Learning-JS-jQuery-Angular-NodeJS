@@ -1,7 +1,15 @@
 // PRACTICANDO POO CON TS
 
+// DEFINIENDO LA INTERFAZ 
+
+interface CamisetaBase{
+    setColor(color);
+    getColor();
+}
+
+
 // CREACIÓN DE LA CLASE
-class Camiseta {
+class Camiseta implements CamisetaBase{
     // Propiedades (características del objeto)
     public color: string;
     public modelo: string;
@@ -35,6 +43,13 @@ class Camiseta {
     }
 
   }
+
+
+  //INSTANCIA DE OBJETO 
+
+
+  var camiseta = new Camiseta("violeta", "manga larga", "Adidas", "XL", 100);
+  console.log(camiseta);
   
 
   
