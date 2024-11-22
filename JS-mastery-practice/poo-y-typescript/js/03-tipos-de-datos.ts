@@ -27,11 +27,23 @@ var lenguajes: Array<any> = ["PHP", "JS", "TS",23];
 
 let years: any[] = [12,13,14,"hola"]; 
 
+
+// TIPOS DE DATOS USANDO PALABRA RESERVADA TYPE 
+
+type letrasonumeros = string | number; 
+
+
+// MULTIPLE TIPO DE DATOS
+
+let cadenaMultiple: letrasonumeros = "nellanells"; 
+
+
 console.log(cadena);
 console.log(numero); 
 console.log(verdadero_falso); 
 console.log(cualquiera);
 console.log(lenguajes);
 console.log(years);
+console.log(cadenaMultiple);
 
 

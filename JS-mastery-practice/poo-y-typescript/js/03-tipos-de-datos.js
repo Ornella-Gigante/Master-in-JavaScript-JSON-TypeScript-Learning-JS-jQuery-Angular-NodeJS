@@ -11,9 +11,12 @@ cualquiera = 80;
 //ARRAYS 
 var lenguajes = ["PHP", "JS", "TS", 23];
 var years = [12, 13, 14, "hola"];
+// MULTIPLE TIPO DE DATOS
+var cadenaMultiple = "nellanells";
 console.log(cadena);
 console.log(numero);
 console.log(verdadero_falso);
 console.log(cualquiera);
 console.log(lenguajes);
 console.log(years);
+console.log(cadenaMultiple);
