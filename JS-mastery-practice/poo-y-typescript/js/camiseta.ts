@@ -45,11 +45,37 @@ class Camiseta implements CamisetaBase{
   }
 
 
+  // CREACIÓN DE CLASE HIJA 
+  // Para heredar se utiliza EXTENDS 
+
+
+  class Sudadera extends Camiseta{
+    public capucha: boolean;
+
+    // Métodos set
+    setCapucha(capucha: boolean){
+        this.capucha = capucha;
+
+    }
+
+    // Método get 
+
+    getCapucha(): boolean{
+        return this.capucha; 
+    }
+  }
+
+
   //INSTANCIA DE OBJETO 
 
 
   var camiseta = new Camiseta("violeta", "manga larga", "Adidas", "XL", 100);
   console.log(camiseta);
   
-
+  var sudadera_nike = new Sudadera("negro", "manga larga", "Nike", "L", 300); 
+  //SE le agrega la capucha 
+  sudadera_nike.setCapucha(true);
+  //Cambiando color de clase hiaj usando metodo heredado 
+  sudadera_nike.setColor("Naranja");
+  console.log(sudadera_nike);
   
