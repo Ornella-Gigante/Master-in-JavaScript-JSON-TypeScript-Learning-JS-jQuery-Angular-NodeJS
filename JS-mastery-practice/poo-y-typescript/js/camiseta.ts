@@ -2,12 +2,28 @@
 
 // DEFINIENDO LA INTERFAZ 
 
-interface CamisetaBase{
-    setColor(color);
-    getColor();
+interface CamisetaBase {
+    setColor(color: string): void;
+    getColor(): string;
+    estampacion?: () => void; // Propiedad del decorador 
 }
 
 
+// Decorador 
+
+function estampar (logo: string){
+    return function(target: Function){
+        target.prototype.estampacion = function():void{
+            console.log("Camiseta Estampada con logo:" + logo);
+
+        }
+    }
+}
+
+// Aplicando el decorador 
+// Los decoradores nunca terminan con punto y coma 
+ 
+@estampar('Gucci')
 // CREACIÓN DE LA CLASE
 class Camiseta implements CamisetaBase{
     // Propiedades (características del objeto)
@@ -71,6 +87,7 @@ class Camiseta implements CamisetaBase{
 
   var camiseta = new Camiseta("violeta", "manga larga", "Adidas", "XL", 100);
   console.log(camiseta);
+  camiseta.estampacion(); 
   
   var sudadera_nike = new Sudadera("negro", "manga larga", "Nike", "L", 300); 
   //SE le agrega la capucha 
