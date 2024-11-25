@@ -1,13 +1,16 @@
-// app.module.ts
+// COMPONENTE PADRE 
+// CONTIENE LOS COMPONENTES HIJOS 
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { VideojuegoComponent } from "./videojuego/videojuego.component";
+import { ZapatillasComponent } from "./zapatillas/zapatillas.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideojuegoComponent
+    VideojuegoComponent,
+    ZapatillasComponent
   ],
   imports: [
     BrowserModule
@@ -15,25 +18,6 @@ import { VideojuegoComponent } from "./videojuego/videojuego.component";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
 
-// videojuego.component.ts
-import { Component } from "@angular/core";
 
-@Component({
-  selector: 'videojuego',
-  template: `
-    <h2>Componente de Videojuegos</h2>
-    <ul>
-      <li>GTA</li>
-      <li>Prince of Persia</li>
-      <li>Tekken</li>
-      <li>Mario</li>
-    </ul>
-  `
-})
-export class VideojuegoComponent {
-  constructor() {
-    console.log("Se ha cargado el componente: videojuego.component.ts");
-  }
-}
+export class AppModule{}
