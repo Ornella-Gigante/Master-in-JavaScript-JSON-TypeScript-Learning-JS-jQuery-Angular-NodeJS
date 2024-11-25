@@ -223,8 +223,13 @@
       <h1>Welcome to the {{ title }} !!!</h1>
       <p>This app is rocking! 🎉</p>
 
+      <button (click)="ocultarVideoJuegos()">Ocultar</button>
+
       <!--Creación de componente videojuego-->
-      <videojuego></videojuego>
+     
+      <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
+      <button (click)="ocultarVideoJuegos(true)" *ngIf="mostrar_videojuegos">Mostrar</button>
+      <videojuego *ngIf="mostrar_videojuegos"></videojuego>
       <!--Fin creación del componente videojuego-->
 
       <!--Creación del componente zapatilla-->
