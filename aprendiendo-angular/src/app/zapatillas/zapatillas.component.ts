@@ -18,8 +18,10 @@ export class ZapatillasComponent implements OnInit{
     public title: string = "Componente de Zapatillas"; 
     public list: string = "Lista de marcas populares de zapatillas";
     public zapatillas: Array<Zapatilla>;
+    public marcas:String[] = []; 
 
     constructor() {
+      this.marcas = new Array(); 
         this.title = "Componente de zapatillas"; 
         this.list = "Lista de zapatillas"
         this.zapatillas = [
@@ -28,16 +30,25 @@ export class ZapatillasComponent implements OnInit{
             new Zapatilla("Tacones", "Gucci", "Negro", 200, true),
         ];
         
-       
-    
         console.log("Se ha cargado el componente: zapatillas.component.ts");
       }
-
 
       ngOnInit() {
 
         console.log(this.zapatillas);
+        this.getMarcas();
           
+      }
+
+      // Se recorrerá la colección de objetos 
+      getMarcas(){
+        this.zapatillas.forEach((zapatilla,index)=>{
+
+          this.marcas.push(zapatilla.marca);
+
+        });
+
+        console.log(this.marcas); 
       }
     
 }
