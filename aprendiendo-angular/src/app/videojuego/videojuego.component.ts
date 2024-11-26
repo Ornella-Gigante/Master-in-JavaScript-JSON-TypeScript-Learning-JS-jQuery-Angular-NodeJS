@@ -4,6 +4,7 @@
 // OnDestroy: Se ejecutará algo antes de eliminar el componente 
 
 import { Component, OnInit, DoCheck, OnDestroy } from "@angular/core";
+import { Configuracion } from "../model/configuracion";
 
 @Component({
   selector: 'videojuego',
