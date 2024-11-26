@@ -32,3 +32,28 @@
       
     </li>
 </ul>
+
+<p>El color de la mayoría de nuestras zapatillas es:</p>
+
+<!--COMIENZO DE LA DIRECTIVA ngSwitch-->
+
+
+<ul [ngSwitch] = "color">
+
+    <li *ngSwitchCase = " 'yellow' ">
+        El color predominante es el <span [ngStyle]="{background : color}">amarillo</span>
+    </li>
+
+    <li *ngSwitchCase = " 'red' ">
+        El color predominante es el<span [ngStyle]="{background : color}"> rojo</span>
+    </li>
+
+    <li *ngSwitchCase = " 'blue' ">
+        El color predominante es el<span [ngStyle]="{background : color}"> azul</span>
+    </li>
+
+    <li *ngSwitchCase = " 'orange' ">
+        El color predominante es el<span [ngStyle]="{background : color}"> naranja</span>
+    </li>
+
+</ul>

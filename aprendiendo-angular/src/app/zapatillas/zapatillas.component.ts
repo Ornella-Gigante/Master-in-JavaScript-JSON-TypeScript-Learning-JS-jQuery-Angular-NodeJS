@@ -19,15 +19,18 @@ export class ZapatillasComponent implements OnInit{
     public list: string = "Lista de marcas populares de zapatillas";
     public zapatillas: Array<Zapatilla>;
     public marcas:String[] = []; 
+    public color: String; 
 
     constructor() {
-      this.marcas = new Array(); 
+        this.color = 'blue'; 
+        this.marcas = new Array(); 
         this.title = "Componente de zapatillas"; 
         this.list = "Lista de zapatillas"
         this.zapatillas = [
             new Zapatilla("Zapatos de salir 2.0", "Nike", "Violeta", 240, true),
             new Zapatilla("Cowboy", "Avocado", "Blanco", 400, true),
             new Zapatilla("Tacones", "Gucci", "Negro", 200, true),
+            new Zapatilla("Botas góticas", "Mango", "Negro", 200, false),
         ];
         
         console.log("Se ha cargado el componente: zapatillas.component.ts");
