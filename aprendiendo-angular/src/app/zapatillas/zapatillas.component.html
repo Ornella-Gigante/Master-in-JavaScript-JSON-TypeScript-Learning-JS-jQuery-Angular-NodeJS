@@ -3,8 +3,7 @@
 <h2>{{title}}</h2>
 <p>{{list}}</p>
 <ul>
-    <li>Adidas</li>
-    <li>Nike</li>
-    <li>Convers</li>
-    <li>Reebok</li>
+    <li *ngFor = "let deportiva of zapatillas">
+        {{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong>
+    </li>
 </ul>

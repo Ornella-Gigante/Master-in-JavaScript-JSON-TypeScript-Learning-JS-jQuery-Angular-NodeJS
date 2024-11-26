@@ -21,7 +21,7 @@ export class VideojuegoComponent implements OnInit , DoCheck, OnDestroy{
     this.title = "Componente de videojuegos"; 
     this.listado = "Listado de los juegos más populares";
 
-    console.log("Se ha cargado el componente: videojuego.component.ts");
+    //console.log("Se ha cargado el componente: videojuego.component.ts");
   }
 
 
@@ -29,7 +29,7 @@ export class VideojuegoComponent implements OnInit , DoCheck, OnDestroy{
 
   ngOnInit() {
 
-    console.log("OnInit ejecutado");
+    //console.log("OnInit ejecutado");
       
   }
 
@@ -37,7 +37,7 @@ export class VideojuegoComponent implements OnInit , DoCheck, OnDestroy{
 
    ngDoCheck() {
 
-    console.log("DoCheck ejecutado");
+    //console.log("DoCheck ejecutado");
       
   }
 
@@ -46,7 +46,7 @@ export class VideojuegoComponent implements OnInit , DoCheck, OnDestroy{
 
   ngOnDestroy(){
 
-    console.log("OnDestroy ejecutado");
+  //console.log("OnDestroy ejecutado");
       
   }
 

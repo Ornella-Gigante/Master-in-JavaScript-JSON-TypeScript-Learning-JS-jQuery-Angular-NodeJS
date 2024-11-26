@@ -9,6 +9,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { CommonModule } from '@angular/common';
 import { Configuracion } from './model/configuracion';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html', 
