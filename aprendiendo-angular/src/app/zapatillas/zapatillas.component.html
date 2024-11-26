@@ -3,7 +3,16 @@
 <h2>{{title}}</h2>
 <p>{{list}}</p>
 <ul>
+    <!--USO DEL DIRECTIVO ngFOR PARA REPETICION-->
     <li *ngFor = "let deportiva of zapatillas">
-        {{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong>
+        {{deportiva.nombre}} - <strong>{{deportiva.precio}}$</strong>
+
+    <!--USO DEL DIRECTIVA ngIf PARA CONDICIONAL-->
+
+    <span *ngIf="deportiva.precio > 80" 
+        [style.background]="deportiva.precio > 80 ? 'green' : 'white'"
+        [style.color]="deportiva.precio > 80 ? 'white' : 'black'"
+        >¡ÚLTIMO MODELO!</span>
+      
     </li>
 </ul>
