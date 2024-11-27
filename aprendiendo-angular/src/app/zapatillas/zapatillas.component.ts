@@ -67,5 +67,16 @@ export class ZapatillasComponent implements OnInit{
       addMarca(){
         this.marcas.push(this.mi_marca);
       }
+
+      // Método para borrar marca 
+      // Se utiliza splice() para borrar el indice de manera automática 
+      // (index,1) = borrar index, solo 1 elemento 
+      
+      borrarMarca(index : number){
+
+        this.marcas.splice(index,1);
+          
     
+}
+
 }

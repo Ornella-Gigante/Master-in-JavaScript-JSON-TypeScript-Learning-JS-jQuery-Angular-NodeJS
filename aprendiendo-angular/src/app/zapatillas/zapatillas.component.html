@@ -11,7 +11,10 @@
 <p>{{mi_marca}}</p>
 
 <ul>
-    <li *ngFor="let marca of marcas">{{marca}}</li>
+    <li *ngFor="let marca of marcas; let index = index">
+        {{ index + ' - ' + marca }}
+        <button (click)="borrarMarca(index)">Borrar</button>
+    </li>
 </ul>
 
 <p>Las zapatillas disponibles son las siguientes:</p>
