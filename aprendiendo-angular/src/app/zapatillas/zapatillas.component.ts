@@ -81,10 +81,19 @@ export class ZapatillasComponent implements OnInit{
 
     // Metodo onBlur() 
     // Ejecuta acciones o validaciones hechas por el usuario
+    // Se activa cuando un elemento pierde el foco (ejemplo, clickear fuera de un campo de texto)
 
 
     onBlur(){
       console.log("Has salido del input");
+    }
+
+    // Metodo del keyup() 
+    // SE activa cuando se suelta una tecla después de presionarla 
+    // Al soltar la tecla, saltará la alerta 
+
+    mostrarPalabra(){
+      alert(this.mi_marca);
     }
       
 
