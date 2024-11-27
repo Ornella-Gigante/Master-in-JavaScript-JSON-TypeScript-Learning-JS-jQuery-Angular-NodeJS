@@ -4,7 +4,7 @@
 <p>{{list}}</p>
 <p>Añadir marca</p>
 <p>
-    <input type="text" [(ngModel)]="mi_marca"/>
+    <input type="text" [(ngModel)]="mi_marca" (blur)="onBlur()"/>
     <button (click)="getMarca()">Mostrar marca</button>
     <button (click)="addMarca()">Añadir marca</button>
 </p>

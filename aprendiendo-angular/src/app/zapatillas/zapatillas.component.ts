@@ -75,8 +75,17 @@ export class ZapatillasComponent implements OnInit{
       borrarMarca(index : number){
 
         this.marcas.splice(index,1);
-          
     
 }
+
+
+    // Metodo onBlur() 
+    // Ejecuta acciones o validaciones hechas por el usuario
+
+
+    onBlur(){
+      console.log("Has salido del input");
+    }
+      
 
 }
