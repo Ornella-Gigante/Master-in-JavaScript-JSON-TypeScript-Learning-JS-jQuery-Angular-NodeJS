@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+.altoPrecio{
+
+
+    color:gray;
+    font-size: 20px;
+    
+}
+
+
+.fondoRojo{
+
+    background: red;
+}
+
+
+
+.subrayado{
+
+    text-decoration: underline;
+
+}
