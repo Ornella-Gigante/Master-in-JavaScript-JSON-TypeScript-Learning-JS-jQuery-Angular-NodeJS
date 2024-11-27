@@ -32,8 +32,8 @@ export class ZapatillasComponent implements OnInit{
         this.zapatillas = [
             new Zapatilla("Zapatos de salir 2.0", "Nike", "Violeta", 240, true),
             new Zapatilla("Cowboy", "Avocado", "Blanco", 400, true),
-            new Zapatilla("Tacones", "Gucci", "Negro", 200, true),
-            new Zapatilla("Botas góticas", "Mango", "Negro", 200, false),
+            new Zapatilla("Tacones", "Gucci", "Negro", 70, true),
+            new Zapatilla("Botas góticas", "Mango", "Negro",65, false),
         ];
         
         console.log("Se ha cargado el componente: zapatillas.component.ts");
@@ -96,5 +96,6 @@ export class ZapatillasComponent implements OnInit{
       alert(this.mi_marca);
     }
       
+
 
 }

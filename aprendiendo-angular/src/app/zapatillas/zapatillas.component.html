@@ -26,13 +26,16 @@
             'text-decoration': !deportiva.stock ? 'line-through': 'none'
           }">
             
-            {{deportiva.nombre}} - <strong>{{deportiva.precio}} $</strong></span>  
+            {{deportiva.nombre}} - <strong [class.altoPrecio]="deportiva.precio >= 80">{{deportiva.precio}} $</strong>
+            
+           </span>  
 
 
-            <span *ngIf="deportiva.precio > 80" 
-                [style.background]="deportiva.precio > 80 ? 'green' : 'white'"
-                [style.color]="deportiva.precio > 80 ? 'white' : 'black'"
-                >¡ÚLTIMO MODELO!</span>
+            <span *ngIf="deportiva.precio &lt; 80" 
+                [style.background]="deportiva.precio &lt; 80 ? 'green' : 'white'"
+                [style.color]="deportiva.precio &lt; 80 ? 'white' : 'black'">
+                ¡EN OFERTA!
+            </span>
 
 
     <!--USO DEL DIRECTIVA ngIf PARA CONDICIONAL-->
