@@ -12,11 +12,85 @@
       <p>{{descripcion}}</p>
 
       <!-- Improved Navigation Menu -->
-      <nav style="display: flex; flex-direction: column; align-items: flex-start; background-color: #333; padding: 1rem; border-radius: 8px;">
-        <a [routerLink]="['/']">Home</a>
-        <a [routerLink]="['/zapatillas']">Zapatillas</a>
-        <a [routerLink]="['/videojuego']">Videojuegos</a>
-        <a [routerLink]="['/cursos']">Cursos</a>
+        <!-- Modern Navigation Menu -->
+        <nav style="
+        width: 250px;
+        background: linear-gradient(145deg, #2c3e50, #3498db);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin: 20px 0;
+      ">
+        <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          display: block;
+          padding: 12px 20px;
+          text-decoration: none;
+          width: 100%;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+          }
+        ">Home</a>
+        
+        <a [routerLink]="['/zapatillas']" routerLinkActive="active" style="
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          display: block;
+          padding: 12px 20px;
+          text-decoration: none;
+          width: 100%;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+          }
+        ">Zapatillas</a>
+        
+        <a [routerLink]="['/videojuego']" routerLinkActive="active" style="
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          display: block;
+          padding: 12px 20px;
+          text-decoration: none;
+          width: 100%;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+          }
+        ">Videojuegos</a>
+        
+        <a [routerLink]="['/cursos']" routerLinkActive="active" style="
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          display: block;
+          padding: 12px 20px;
+          text-decoration: none;
+          width: 100%;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+          }
+        ">Cursos</a>
       </nav>
 
       <router-outlet></router-outlet>
