@@ -11,21 +11,15 @@
       <p>This app is rocking! 🎉</p>
       <p>{{descripcion}}</p>
 
-      <!--Creación de componente videojuego-->
-      <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
-      <button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
-      <videojuego *ngIf="mostrar_videojuegos"></videojuego>
-      <!--Fin creación del componente videojuego-->
+      <!-- Navigation Links -->
+      <nav>
+        <a routerLink="/">Home</a>
+        <a routerLink="/zapatillas">Zapatillas</a>
+        <a routerLink="/videojuego">Videojuegos</a>
+        <a routerLink="/cursos">Cursos</a>
+      </nav>
 
-      <!--Creación del componente zapatilla-->
-      <zapatillas></zapatillas>
-      <!--Fin creación del componente zapatilla-->
-
-      <!--Creación del componente cursos-->
-      <cursos></cursos>
-      <!--Fin creación del componente cursos-->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </main>
-
-<router-outlet />
