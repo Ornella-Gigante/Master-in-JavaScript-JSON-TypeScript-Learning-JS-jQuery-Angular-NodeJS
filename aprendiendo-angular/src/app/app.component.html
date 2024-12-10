@@ -13,14 +13,10 @@
 
       <!-- Improved Navigation Menu -->
       <nav style="display: flex; flex-direction: column; align-items: flex-start; background-color: #333; padding: 1rem; border-radius: 8px;">
-        <a routerLink="/" style="color: white; text-decoration: none; font-size: 1.2rem; padding: 0.5rem; border-radius: 4px; transition: background-color 0.3s;" 
-           onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='transparent'">Home</a>
-        <a routerLink="/zapatillas" style="color: white; text-decoration: none; font-size: 1.2rem; padding: 0.5rem; border-radius: 4px; transition: background-color 0.3s;" 
-           onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='transparent'">Zapatillas</a>
-        <a routerLink="/videojuego" style="color: white; text-decoration: none; font-size: 1.2rem; padding: 0.5rem; border-radius: 4px; transition: background-color 0.3s;" 
-           onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='transparent'">Videojuegos</a>
-        <a routerLink="/cursos" style="color: white; text-decoration: none; font-size: 1.2rem; padding: 0.5rem; border-radius: 4px; transition: background-color 0.3s;" 
-           onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='transparent'">Cursos</a>
+        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/zapatillas']">Zapatillas</a>
+        <a [routerLink]="['/videojuego']">Videojuegos</a>
+        <a [routerLink]="['/cursos']">Cursos</a>
       </nav>
 
       <router-outlet></router-outlet>

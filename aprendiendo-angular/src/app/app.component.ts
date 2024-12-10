@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Configuracion } from './model/configuracion';
 
@@ -7,7 +7,7 @@ import { Configuracion } from './model/configuracion';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports: [RouterOutlet, CommonModule]
+  imports: [RouterOutlet, CommonModule,RouterOutlet, RouterModule]
 })
 export class AppComponent {
   title = 'Master of JavaScript, TypeScript and Angular';
