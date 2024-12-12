@@ -14,6 +14,7 @@ export class CursosComponent implements OnInit{
   public title:string;
   public list:string;
   public nombre!: string;  // Usando '!' para asegurar que se asignará más tarde
+  public followers!: number; 
 
      
 
@@ -37,11 +38,11 @@ export class CursosComponent implements OnInit{
 
   ngOnInit() {
     // Aquí puedes acceder a _route y usarlo según sea necesario
-
-    this._route.params.subscribe((params: Params) =>{
-      //this.nombre = params.nombre; // otra opción de hacer lo mismo que en el array asociativo
-      this.nombre = params['nombre']; //array asociativo
+    this._route.params.subscribe((params: Params) => {
+      this.nombre = params['nombre']; // array asociativo
+      this.followers = Number(params['followers']); // Convierte a número
       console.log(this.nombre);
+      console.log(this.followers); // Ahora es un número
     });
   }
 }
