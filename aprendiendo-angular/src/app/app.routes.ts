@@ -10,6 +10,7 @@ export const routes: Routes = [
     { path: 'zapatillas', component: ZapatillasComponent },
     { path: 'videojuego', component: VideojuegoComponent },
     { path: 'cursos', component: CursosComponent },
+    { path: 'cursos/:nombre', component: CursosComponent },
     { path: '**', component: NotFoundComponent } // Catch-all route for 404
 ];
 
