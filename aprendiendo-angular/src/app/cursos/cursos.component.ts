@@ -45,4 +45,8 @@ export class CursosComponent implements OnInit{
       console.log(this.followers); // Ahora es un número
     });
   }
+
+  redirigir(){
+    this._router.navigate(['/zapatillas']);
+  }
 }
