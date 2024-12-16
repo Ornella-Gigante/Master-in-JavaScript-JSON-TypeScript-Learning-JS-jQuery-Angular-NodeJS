@@ -1,11 +1,29 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+
+  public identificado: boolean; 
+
+
+  constructor(){
+    this.identificado  = false; 
+  }
+
+  ngOnInit(){
+
+  }
+
+// Creación del método para identificarse 
+
+setIdentificado(){
+  this.identificado = true; 
+}
 
 }
