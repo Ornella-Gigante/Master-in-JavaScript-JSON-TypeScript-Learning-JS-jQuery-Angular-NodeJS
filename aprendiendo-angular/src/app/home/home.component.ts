@@ -26,4 +26,9 @@ setIdentificado(){
   this.identificado = true; 
 }
 
+
+  // Método para desactivar la identificación
+  unsetIdentificado() {
+    this.identificado = false;
+  }
 }
