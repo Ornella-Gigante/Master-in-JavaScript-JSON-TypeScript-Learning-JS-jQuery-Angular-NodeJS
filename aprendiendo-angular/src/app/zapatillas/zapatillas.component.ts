@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Zapatilla } from "../model/zapatilla";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+import { ZapatillaService } from "../service/zapatilla.service";
 
 
 @Component({
@@ -9,7 +10,8 @@ import { FormsModule } from "@angular/forms";
     selector: 'zapatillas',
     templateUrl: './zapatillas.component.html',
     standalone: true,
-    imports: [CommonModule, FormsModule] 
+    imports: [CommonModule, FormsModule],
+    providers: [ZapatillaService] 
 
 })
 
@@ -23,25 +25,25 @@ export class ZapatillasComponent implements OnInit{
     public color: String; 
     public mi_marca: string;
 
-    constructor() {
+    constructor(
+      private _zapatillaService: ZapatillaService
+    ) {
+        
         this.color = 'blue'; 
         this.marcas = new Array(); 
         this.title = "Componente de zapatillas"; 
         this.list = "Lista de zapatillas"
         this.mi_marca= "Tacones";
+      
         this.zapatillas = [
-            new Zapatilla("Zapatos de salir 2.0", "Nike", "Violeta", 240, true),
-            new Zapatilla("Cowboy", "Avocado", "Blanco", 400, true),
-            new Zapatilla("Tacones", "Gucci", "Negro", 70, true),
-            new Zapatilla("Botas góticas", "Mango", "Negro",65, false),
-        ];
-        
+      
+      ];
         console.log("Se ha cargado el componente: zapatillas.component.ts");
       }
 
       ngOnInit() {
 
-        console.log(this.zapatillas);
+        this.zapatillas = this._zapatillaService.getZapatillas();
         this.getMarcas();
           
       }
