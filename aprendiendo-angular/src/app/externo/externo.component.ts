@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ExternoComponent implements OnInit {
   public user: any = null; // Almacena los datos del usuario
   public userId: string = ''; // ID del usuario ingresado
+  public isLoading: boolean = false; // Indicador de carga
 
   constructor(private _peticionesService: PeticionesService) {}
 
@@ -25,9 +26,11 @@ export class ExternoComponent implements OnInit {
       return;
     }
 
+    this.isLoading = true; // Activar indicador de carga
+    this.user = null; // Limpiar datos previos
+
     this._peticionesService.getUserById(this.userId).subscribe({
       next: (result) => {
-        // Verifica si la respuesta tiene la propiedad `data`
         console.log('Datos completos del usuario:', result);
         if (result && result.data) {
           this.user = result.data; // Asigna la respuesta al objeto `user`
@@ -40,6 +43,7 @@ export class ExternoComponent implements OnInit {
         console.error('Error al cargar el usuario:', error);
       },
       complete: () => {
+        this.isLoading = false; // Desactivar indicador de carga
         console.log('¡Carga de usuario completada!');
       }
     });

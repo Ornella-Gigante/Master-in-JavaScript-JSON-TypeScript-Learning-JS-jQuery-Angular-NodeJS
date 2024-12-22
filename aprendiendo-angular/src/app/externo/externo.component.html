@@ -4,7 +4,18 @@
   <button (click)="cargaUsuario()">Cargar Usuario</button>
 </div>
 
+
+<!-- Mostrar mensaje de carga -->
+<div *ngIf="isLoading">
+  <p>Cargando...</p>
+</div>
+
 <div *ngIf="user">
   <h2>{{ user.first_name }} {{ user.last_name }}</h2>
   <img [src]="user.avatar" alt="Avatar" width="200"/>
+</div>
+
+<!-- Mostrar mensaje si no hay datos ni está cargando -->
+<div *ngIf="!isLoading && !user">
+  <p>No se encontraron datos para este usuario.</p>
 </div>
