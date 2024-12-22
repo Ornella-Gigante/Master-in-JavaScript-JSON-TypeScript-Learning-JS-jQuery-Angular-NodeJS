@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { PeticionesService } from '../service/peticiones.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-externo',
   templateUrl: './externo.component.html',
-  styleUrls: ['./externo.component.css']
+  styleUrls: ['./externo.component.css'],
+  imports: [CommonModule]
 })
 export class ExternoComponent implements OnInit {
 

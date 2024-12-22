@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Configuracion } from './model/configuracion';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
