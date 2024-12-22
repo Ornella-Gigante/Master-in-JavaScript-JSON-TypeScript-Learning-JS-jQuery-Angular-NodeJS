@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root' // Provisión global para evitar problemas de inyección
+  providedIn: 'root'
 })
 export class PeticionesService {
-  private url = 'https://reqres.in/api/users/2';
+  private apiUrl = 'https://reqres.in/api/users'; // URL base de la API
 
-  constructor(private _http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  getUser(): Observable<any> {
-    return this._http.get(this.url); // Realiza una solicitud GET
+  getUserById(userId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${userId}`); // Llama a la API con el ID del usuario
   }
 }

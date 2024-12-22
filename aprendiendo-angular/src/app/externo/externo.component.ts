@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PeticionesService } from '../service/peticiones.service';
-import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,24 +9,44 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule]
 })
 export class ExternoComponent implements OnInit {
-
-  public user:any; 
+  public user: any = null; // Almacena los datos del usuario
+  public userId: string = ''; // ID del usuario ingresado
 
   constructor(private _peticionesService: PeticionesService) {}
 
   ngOnInit() {
-    console.log('ngOnInit ejecutado'); // Verifica que el componente se inicializa
+    console.log('Componente Externo inicializado');
+  }
 
-    this._peticionesService.getUser().subscribe({
+  // Método para cargar un usuario a partir del ID ingresado
+  cargaUsuario() {
+    if (!this.userId) {
+      console.warn('Por favor, ingresa un ID de usuario válido');
+      return;
+    }
+
+    this._peticionesService.getUserById(this.userId).subscribe({
       next: (result) => {
-        this.user = result.data; // Muestra los datos recibidos en consola
+        // Verifica si la respuesta tiene la propiedad `data`
+        console.log('Datos completos del usuario:', result);
+        if (result && result.data) {
+          this.user = result.data; // Asigna la respuesta al objeto `user`
+          console.log('Datos del usuario cargados:', this.user);
+        } else {
+          console.error('No se encontraron datos para el usuario');
+        }
       },
       error: (error) => {
-        console.error('Error HTTP:', error); // Maneja errores HTTP
+        console.error('Error al cargar el usuario:', error);
       },
       complete: () => {
-        console.log('¡Observable completado!'); // Indica que la solicitud ha finalizado
+        console.log('¡Carga de usuario completada!');
       }
     });
+  }
+
+  // Método para actualizar el ID del usuario al escribir en el campo de texto
+  onUserIdChange(event: any) {
+    this.userId = event.target.value;
   }
 }

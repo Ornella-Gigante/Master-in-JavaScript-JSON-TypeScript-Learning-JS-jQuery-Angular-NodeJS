@@ -1,5 +1,10 @@
+<div>
+  <!-- Usamos (input) para escuchar el evento y actualizar el valor de userId -->
+  <input type="text" [value]="userId" (input)="onUserIdChange($event)" placeholder="Ingresa el ID del usuario" />
+  <button (click)="cargaUsuario()">Cargar Usuario</button>
+</div>
+
 <div *ngIf="user">
-    <img src="{{user.avatar}}" width="200"/>
-    <h2>{{ user.first_name + ' ' + user.last_name }}</h2>
-  </div>
-  
+  <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+  <img [src]="user.avatar" alt="Avatar" width="200"/>
+</div>
