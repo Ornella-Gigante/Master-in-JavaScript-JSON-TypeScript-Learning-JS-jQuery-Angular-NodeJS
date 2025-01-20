@@ -5,6 +5,8 @@ import { VideojuegoComponent } from "./videojuego/videojuego.component";
 import { CursosComponent } from "./cursos/cursos.component";
 import { ExternoComponent } from './externo/externo.component';
 import { NotFoundComponent } from "./not-found/not-found.component";
+import { Pipe, PipeTransform } from '@angular/core';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
