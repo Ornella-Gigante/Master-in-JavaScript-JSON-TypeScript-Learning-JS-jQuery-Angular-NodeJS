@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 import {  provideHttpClient } from '@angular/common/http'; // Usa provideHttpClient
 import { AppComponent } from './app.component';
 import { ExternoComponent } from './externo/externo.component';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExternoComponent,
+    CalculadoraPipe
   ],
   imports: [
     BrowserModule,
