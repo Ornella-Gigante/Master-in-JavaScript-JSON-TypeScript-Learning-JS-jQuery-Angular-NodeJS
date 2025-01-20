@@ -7,6 +7,8 @@ import { ExternoComponent } from './externo/externo.component';
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { Pipe, PipeTransform } from '@angular/core';
 import { CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
+
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,6 +17,7 @@ export const routes: Routes = [
     { path: 'cursos', component: CursosComponent },
     { path: 'cursos/:nombre/:followers', component: CursosComponent },
     { path: 'externo', component: ExternoComponent},
+    { path: 'contacto', component: ContactoComponent},
     { path: '**', component: NotFoundComponent } // Catch-all route for 404
 ];
 
