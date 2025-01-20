@@ -109,6 +109,23 @@
             transform: translateX(5px);
           }
           ">Externo</a>
+
+          <a [routerLink]="['/contacto']" routerLinkActive="active" style="
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          display: block;
+          padding: 12px 20px;
+          text-decoration: none;
+          width: 100%;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+          }
+          ">Contacto</a>
       </nav>
 
       <router-outlet></router-outlet>
