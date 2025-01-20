@@ -3,6 +3,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Configuracion } from './model/configuracion';
 import { BrowserModule } from '@angular/platform-browser';
+import { Pipe} from '@angular/core';
+ import { PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-root',

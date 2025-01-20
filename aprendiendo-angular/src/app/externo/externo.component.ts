@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { PeticionesService } from '../service/peticiones.service';
 import { CommonModule } from '@angular/common';
+import { CalculadoraPipe } from '../pipes/calculadora.pipe';
 
 @Component({
   selector: 'app-externo',
   templateUrl: './externo.component.html',
   styleUrls: ['./externo.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, CalculadoraPipe]
 })
 export class ExternoComponent implements OnInit {
   public user: any = null; // Almacena los datos del usuario
