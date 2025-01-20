@@ -12,10 +12,12 @@ export class ExternoComponent implements OnInit {
   public user: any = null; // Almacena los datos del usuario
   public userId: string = ''; // ID del usuario ingresado
   public isLoading: boolean = false; // Indicador de carga
+  public fecha: any; 
 
   constructor(private _peticionesService: PeticionesService) {}
 
   ngOnInit() {
+    this.fecha = new Date();
     console.log('Componente Externo inicializado');
   }
 

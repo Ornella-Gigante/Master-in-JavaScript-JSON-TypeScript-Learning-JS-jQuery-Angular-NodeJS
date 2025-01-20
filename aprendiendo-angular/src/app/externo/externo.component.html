@@ -1,5 +1,7 @@
 <div>
   <!-- Usamos (input) para escuchar el evento y actualizar el valor de userId -->
+   {{fecha}}
+   <hr>
   <input type="text" [value]="userId" (input)="onUserIdChange($event)" placeholder="Ingresa el ID del usuario" />
   <button (click)="cargaUsuario()">Cargar Usuario</button>
 </div>
