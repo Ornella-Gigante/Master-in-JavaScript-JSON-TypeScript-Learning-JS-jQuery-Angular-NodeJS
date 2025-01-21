@@ -2,7 +2,7 @@
 
 <form #formContacto="ngForm" (ngSubmit)="onSubmit()">
     <label for="nombre">Nombre</label> <br/>
-    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required/>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required pattern="[a-zA-Z]"/>
     
     <span *ngIf="nombre.touched && !nombre.valid">
         Nombre obligatorio
