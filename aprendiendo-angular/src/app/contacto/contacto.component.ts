@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactoUsuario } from '../model/contacto.usuario';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css',
-  imports: [FormsModule]
+  imports: [FormsModule, CommonModule, NgIf]
 })
 export class ContactoComponent implements OnInit{
   public usuario: ContactoUsuario;
