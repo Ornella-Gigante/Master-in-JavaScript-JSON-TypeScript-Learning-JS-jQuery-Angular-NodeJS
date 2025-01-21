@@ -25,8 +25,10 @@ export class ContactoComponent implements OnInit{
 
   //Definiendo la clase del componente 
 
-  onSubmit(){
+  onSubmit(form:any){
     console.log("Evento Submit lanzado");
+    //Vaciando formulario automaticamente 
+    form.reset();
     //Para ver a través de herramientas desarrollador los datos del valor insertado por usuario
     console.log(this.usuario)
   }
